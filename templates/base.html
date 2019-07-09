@@ -75,13 +75,12 @@
     <div role="banner" id="masthead">
         <header>
             {% if GRAVATAR %}
-            <a href="/"><img src="{{ GRAVATAR }}" alt="Matt McManus Avatar" class="gravatar"></a>
+            <a href="/"><img src="{{ GRAVATAR }}" alt="{{ FIRST_NAME }} Avatar" class="gravatar"></a>
             {% elif LOGO %}
-            <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="McManus Logo"></a>
-            {% else %}
-            <h1><a href="/">{{ FIRST_NAME }}'s Blog</a></h1>
+            <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="{{ FIRST_NAME }} Logo"></a>
             {% endif %}
-            <a href="#menu" id="menu-link">more stuff</a>
+            <h1><a href="/">{{ FIRST_NAME }}'s Blog</a></h1>
+            <a href="#menu" id="menu-link">menu</a>
             <nav id="menu">
                 <ul>
                     {% if DISPLAY_PAGES_ON_MENU %}
@@ -99,6 +98,10 @@
                             {% endif %}
                         {% endfor %}
                     {% endif %}
+                    <h2 class="header">Elsewhere</h2>
+                    {% for title, link in MENUITEMS %}
+                        <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
                 </ul>
             </nav>
         </header>
