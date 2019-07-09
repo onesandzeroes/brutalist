@@ -22,11 +22,15 @@ $fonts: 'Lato', sans-serif
  
 /* FONTS */
 body
+  background-color: #f0f1f2
+  background-image: url("/theme/img/perlin.svg")
+  background-size: cover
   font-family: 'Lato', sans-serif
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
 .page
+  background-color: #f0f1f2
   max-width: 42.5em
   /* 680/16 = 42.5 */
   margin: auto
@@ -50,8 +54,10 @@ a
 
 /* NAVIGATION */
 div#masthead
+
   img
     display: inline-block
+    margin: auto
     max-width: 20%
     padding: 1em
     height: auto
@@ -62,14 +68,20 @@ div#masthead
       max-width: 60%
       padding: 0
     @include breakpoint(large)
-      max-width: 50%
+      max-width: 80%
   @include breakpoint(medium)
     position: fixed
     max-width: 20%
     padding-left: 4em
     padding-top: 5%
+  
+  header
+    padding-top: 10%
+    background-color: #f0f1f2
+    text-align: center
 
   nav#menu
+    background-color: #f0f1f2
     clear: both
     -webkit-transition: all 0.3s ease-out  
     -moz-transition: all 0.3s ease-out
@@ -85,6 +97,9 @@ div#masthead
         display: block
         font-weight: 400
         font-size: 1.2em
+
+    h2
+      text-align: center
     
     &#menu.active
       max-height: 15em
@@ -146,10 +161,13 @@ footer
       h2
         font-size: 2em
         line-height: 1.3em
+    .cover
+      img
+        max-width: 80%
     .summary
       padding-bottom: 1em
       font-size: 1.125em
-      font-weight: 100
+      font-weight: 300
     .readmore
       color: $color-secondary
       float: right

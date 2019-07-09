@@ -262,12 +262,16 @@ section, article, header, footer, nav, aside, hgroup {
 /* END VARIABLES */
 /* FONTS */
 body {
+  background-color: #f0f1f2;
+  background-image: url("/theme/img/perlin.svg");
+  background-size: cover;
   font-family: "Lato", sans-serif;
 }
 
 /* END FONTS */
 /* MAIN CONTENT CONTAINER */
 .page {
+  background-color: #f0f1f2;
   max-width: 42.5em;
   /* 680/16 = 42.5 */
   margin: auto;
@@ -304,6 +308,7 @@ a:hover {
 /* NAVIGATION */
 div#masthead img {
   display: inline-block;
+  margin: auto;
   max-width: 20%;
   padding: 1em;
   height: auto;
@@ -322,7 +327,7 @@ div#masthead img {
 }
 @media (min-width: 65em) {
   div#masthead img {
-    max-width: 50%;
+    max-width: 80%;
   }
 }
 @media (min-width: 55em) {
@@ -333,7 +338,13 @@ div#masthead img {
     padding-top: 5%;
   }
 }
+div#masthead header {
+  padding-top: 10%;
+  background-color: #f0f1f2;
+  text-align: center;
+}
 div#masthead nav#menu {
+  background-color: #f0f1f2;
   clear: both;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -353,6 +364,9 @@ div#masthead nav#menu {
     font-weight: 400;
     font-size: 1.2em;
   }
+}
+div#masthead nav#menu h2 {
+  text-align: center;
 }
 div#masthead nav#menu#menu.active {
   max-height: 15em;
@@ -436,10 +450,13 @@ footer p {
   font-size: 2em;
   line-height: 1.3em;
 }
+.articles article .cover img {
+  max-width: 80%;
+}
 .articles article .summary {
   padding-bottom: 1em;
   font-size: 1.125em;
-  font-weight: 100;
+  font-weight: 300;
 }
 .articles article .readmore {
   color: #39739d;
