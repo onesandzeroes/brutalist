@@ -17,6 +17,9 @@
                             <h2>{{ article.title }}</h2>
                         </a>
                     </header>
+                    {% if article.cover_image %}
+                        <div class="cover"><img src="{{ article.cover_image }}"></img></div>
+                    {% endif %}
                     <div class="summary">{{ article.description }} </div>
                     <div class="tags">
                         <ul class="tags">
