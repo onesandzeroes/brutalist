@@ -114,7 +114,7 @@ div#masthead
 
     li a
       display: block
-      padding: 0.8em
+      padding: 0.6em
       text-decoration: none
       border-bottom: 1px solid #808080
       @include breakpoint(medium)
@@ -135,6 +135,8 @@ footer
   margin-bottom: 2em
   margin-top: 2em 
   p
+    color: $color-gray
+  a
     color: $color-gray
 /* END FOOTER STYLES */
 
@@ -274,6 +276,22 @@ footer
       .embedded-tweet
         margin-top: 1em
         margin-bottom: 2em
+
+      table
+        th
+          padding: 5px
+          background-color: $color-secondary
+          color: #EEEEEE
+        td
+          padding: 3px
+        th, td
+          border-left: 1px solid $color-gray
+          border-right: 1px solid $color-gray
+          border-collapse: collapse
+        tr:nth-child(even) 
+          background-color: lighten($color-gray, 10%)
+        tr:hover
+          background-color: $color-gray
 
 .back-to-top
   padding-top: 2em

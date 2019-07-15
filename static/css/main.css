@@ -384,7 +384,7 @@ div#masthead nav#menu ul {
 }
 div#masthead nav#menu li a {
   display: block;
-  padding: 0.8em;
+  padding: 0.6em;
   text-decoration: none;
   border-bottom: 1px solid #808080;
 }
@@ -413,6 +413,9 @@ footer {
   margin-top: 2em;
 }
 footer p {
+  color: #abb4b9;
+}
+footer a {
   color: #abb4b9;
 }
 
@@ -583,6 +586,25 @@ footer p {
 .article article .content .embedded-tweet {
   margin-top: 1em;
   margin-bottom: 2em;
+}
+.article article .content table th {
+  padding: 5px;
+  background-color: #39739d;
+  color: #EEEEEE;
+}
+.article article .content table td {
+  padding: 3px;
+}
+.article article .content table th, .article article .content table td {
+  border-left: 1px solid #abb4b9;
+  border-right: 1px solid #abb4b9;
+  border-collapse: collapse;
+}
+.article article .content table tr:nth-child(even) {
+  background-color: #c7cdd0;
+}
+.article article .content table tr:hover {
+  background-color: #abb4b9;
 }
 
 .back-to-top {
