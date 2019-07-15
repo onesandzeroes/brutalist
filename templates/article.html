@@ -10,6 +10,7 @@
   {% endfor %}
 
 {% endblock %}
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock title %}
 {% block twittercard %}
 {% if article.cover_image %}
 <meta name="twitter:card" content="summary_large_image">
