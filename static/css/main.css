@@ -272,8 +272,8 @@ body {
 /* MAIN CONTENT CONTAINER */
 .page {
   background-color: #f0f1f2;
-  max-width: 42.5em;
-  /* 680/16 = 42.5 */
+  max-width: 50em;
+  /* 800/16 = 50 */
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -339,11 +339,13 @@ div#masthead img {
   }
 }
 div#masthead header {
+  border-radius: 10px;
   padding-top: 10%;
   background-color: #f0f1f2;
   text-align: center;
 }
 div#masthead nav#menu {
+  border-radius: 10px;
   background-color: #f0f1f2;
   clear: both;
   -webkit-transition: all 0.3s ease-out;
@@ -409,8 +411,8 @@ div#masthead a#menu-link {
 /* END NAVIGATION */
 /* FOOTER */
 footer {
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin: 2em auto;
+  max-width: 600px;
 }
 footer p {
   color: #abb4b9;
@@ -584,6 +586,9 @@ footer a {
 .article article .content .embedded-tweet {
   margin-top: 1em;
   margin-bottom: 2em;
+}
+.article article .content table {
+  margin: auto;
 }
 .article article .content table th {
   padding: 5px;
