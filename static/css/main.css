@@ -272,7 +272,7 @@ body {
 /* MAIN CONTENT CONTAINER */
 .page {
   background-color: #f0f1f2;
-  max-width: 50em;
+  max-width: 42.5em;
   /* 800/16 = 50 */
   margin: auto;
   text-align: center;
@@ -412,13 +412,16 @@ div#masthead a#menu-link {
 /* FOOTER */
 footer {
   margin: 2em auto;
-  max-width: 600px;
 }
 footer p {
   color: #abb4b9;
 }
 footer a {
   color: #abb4b9;
+}
+
+#footer {
+  max-width: 600px;
 }
 
 /* END FOOTER STYLES */
@@ -428,13 +431,13 @@ footer a {
   padding: 1.5em;
 }
 .articles ol li {
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   padding-top: 1em;
 }
 @media (min-width: 55em) {
   .articles {
     padding: 2em;
-    padding-top: 4.25em;
+    padding-top: 2em;
   }
 }
 .articles article {
@@ -459,13 +462,12 @@ footer a {
   max-width: 80%;
 }
 .articles article .summary {
-  padding-bottom: 1em;
   font-size: 1.125em;
   font-weight: 300;
 }
 .articles article .readmore {
   color: #39739d;
-  float: right;
+  padding-bottom: 0.5em;
   text-decoration: underline;
 }
 .articles article .tags {

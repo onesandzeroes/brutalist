@@ -21,6 +21,9 @@
                         <div class="cover"><img src="{{ article.cover_image }}" alt=""></img></div>
                     {% endif %}
                     <div class="summary">{{ article.description }} </div>
+                    <a href="{{ SITEURL }}/{{ article.url }}">
+                        <p class="readmore">Read more...</p>
+                    </a>
                     <div class="tags">
                         <ul class="tags">
                         {% for tag in article.tags %}
@@ -28,9 +31,6 @@
                         {% endfor %}
                         </ul>
                     </div>
-                    <a href="{{ SITEURL }}/{{ article.url }}">
-                        <p class="readmore">Read more...</p>
-                    </a>
                 </article>
             </li>
             {% endfor %}
