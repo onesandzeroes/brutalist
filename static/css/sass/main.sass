@@ -22,10 +22,12 @@ $fonts: 'Lato', sans-serif
  
 /* FONTS */
 body
-  background-color: #f0f1f2
-  background-image: url("/theme/img/perlin.svg")
-  background-size: cover
+  background-color: #e8e7c3
   font-family: 'Lato', sans-serif
+  @include breakpoint(large)
+    background-image: url("/theme/img/perlin.svg")
+    background-attachment: fixed
+    background-size: cover
 /* END FONTS */
 
 /* MAIN CONTENT CONTAINER */
