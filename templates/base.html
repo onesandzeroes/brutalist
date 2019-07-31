@@ -74,6 +74,7 @@
             <a href="#menu" id="menu-link">menu</a>
             <nav id="menu">
                 <ul>
+                    <li><a href="{{ SITEURL }}/feeds/all.atom.xml">RSS</a></li>
                     {% if DISPLAY_PAGES_ON_MENU %}
                       {% for p in pages %}
                         <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.slug }}</a></li>
@@ -87,7 +88,7 @@
                             {% endif %}
                         {% endfor %}
                     {% endif %}
-                    <h2 class="header">Elsewhere</h2>
+                    <h2 class="header">Find me:</h2>
                     {% for title, link in MENUITEMS %}
                         <li><a href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
@@ -132,10 +133,6 @@
                         All content can be shared and used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
                         license and any code is free to use under the <a href="http://www.wtfpl.net/">WTFPL</a> license.
                     </p>
-                    {% if ATTRIBUTION %} 
-                    <p><i>"Brutal"</i> Pelican Theme</p>
-                    <p>Designed and built by <a href="http://twitter.com/mcman_s">@mcman_s</a> in Denver</p>
-                    {% endif %}
                 </footer>
         {% endblock footer %}
         </div>
