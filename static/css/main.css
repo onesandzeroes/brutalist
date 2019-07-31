@@ -262,10 +262,15 @@ section, article, header, footer, nav, aside, hgroup {
 /* END VARIABLES */
 /* FONTS */
 body {
-  background-color: #f0f1f2;
-  background-image: url("/theme/img/perlin.svg");
-  background-size: cover;
+  background-color: #e8e7c3;
   font-family: "Lato", sans-serif;
+}
+@media (min-width: 65em) {
+  body {
+    background-image: url("/theme/img/perlin.svg");
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 /* END FONTS */
@@ -273,7 +278,6 @@ body {
 .page {
   background-color: #f0f1f2;
   max-width: 42.5em;
-  /* 800/16 = 50 */
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -348,11 +352,11 @@ div#masthead nav#menu {
   border-radius: 10px;
   background-color: #f0f1f2;
   clear: both;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   overflow: hidden;
   max-height: 0;
 }
@@ -398,8 +402,8 @@ div#masthead nav#menu li a {
 div#masthead a#menu-link {
   float: right;
   display: block;
-  padding: 1em;
-  line-height: 4em;
+  padding: 0.5em;
+  line-height: 2em;
   font-size: 1.2em;
 }
 @media (min-width: 55em) {
@@ -590,11 +594,15 @@ footer a {
   margin-bottom: 2em;
 }
 .article article .content table {
+  font-size: 0.8em;
   margin: auto;
+  margin-bottom: 1em;
+  border: 2px solid black;
 }
 .article article .content table th {
   padding: 5px;
   background-color: #39739d;
+  border-bottom: 2px solid black;
   color: #EEEEEE;
 }
 .article article .content table td {
