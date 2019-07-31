@@ -13,6 +13,7 @@
 /* END MIXINS */
 
 /* VARIABLES */
+$color-background: #f0f1f2
 $color-primary: #232a2e
 $color-secondary: #39739d
 $color-third: #E1ECF4
@@ -32,7 +33,7 @@ body
 
 /* MAIN CONTENT CONTAINER */
 .page
-  background-color: #f0f1f2
+  background-color: $color-background
   max-width: 42.5em
   margin: auto
   text-align: center
@@ -80,12 +81,12 @@ div#masthead
   header
     border-radius: 10px
     padding-top: 10%
-    background-color: #f0f1f2
+    background-color: $color-background
     text-align: center
 
   nav#menu
     border-radius: 10px
-    background-color: #f0f1f2
+    background-color: $color-background
     clear: both
     -webkit-transition: all 0.2s ease-out  
     -moz-transition: all 0.2s ease-out
@@ -223,7 +224,7 @@ footer
       /* 18/16 = 1.125 */
       font-weight: 300
       p
-        padding-bottom: 1.5em
+        padding-bottom: 1em
       /* article headers */
       h2
         font-size: 1.4em
@@ -279,6 +280,15 @@ footer
       .embedded-tweet
         margin-top: 1em
         margin-bottom: 2em
+      
+      blockquote
+        background: darken($color-background, 10%)
+        border-left: 10px solid darken($color-background, 30%)
+        margin: 0.5em 10px
+        padding: 0.5em 10px
+
+        p
+          display: inline
 
       table
         font-size: 0.8em

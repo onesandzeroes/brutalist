@@ -531,7 +531,7 @@ footer a {
   /* code blocks */
 }
 .article article .content p {
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 .article article .content h2 {
   font-size: 1.4em;
@@ -592,6 +592,15 @@ footer a {
 .article article .content .embedded-tweet {
   margin-top: 1em;
   margin-bottom: 2em;
+}
+.article article .content blockquote {
+  background: #d5d8da;
+  border-left: 10px solid #9ea5ab;
+  margin: 0.5em 10px;
+  padding: 0.5em 10px;
+}
+.article article .content blockquote p {
+  display: inline;
 }
 .article article .content table {
   font-size: 0.8em;
