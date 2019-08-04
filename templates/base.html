@@ -40,8 +40,7 @@
         {% if FAVICON %}
         <link rel="icon" type="image/png" href="{{ SITEURL }}/images/{{ FAVICON }}">
         {% endif %}
-        <!-- moment.js for date formatting -->
-        <script src="{{ SITEURL }}/theme/js/moment.min.js" defer></script>
+        <script src="{{ SITEURL }}/theme/js/dayjs.min.js"></script>
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygment.css" />
@@ -129,7 +128,7 @@
                         {% endif %}
                     </div>
                     <p>
-                        © <script>document.write(moment().format('YYYY'));</script> {{ AUTHOR }}. 
+                        © <script>document.write(dayjs().year());</script> {{ AUTHOR }}. 
                         All content can be shared and used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
                         license and any code is free to use under the <a href="http://www.wtfpl.net/">WTFPL</a> license.
                     </p>

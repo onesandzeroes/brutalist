@@ -45,7 +45,7 @@
             <a name="top"></a>
             <p>
               <time datetime=" {{ article.date }}">
-                <script>document.write(moment('{{ article.date }}').format('LL'));</script>
+                <script>document.write(dayjs("{{ article.date }}").format("MMMM D YYYY"));</script>
               </time>
             </p>
         </footer>
