@@ -736,5 +736,10 @@ img.emoji {
 }
 
 /* END EMOJIS */
+/* TYPOGRAPHY */
+sup {
+  vertical-align: super;
+  font-size: 80%;
+}
 
 /*# sourceMappingURL=main.css.map */
