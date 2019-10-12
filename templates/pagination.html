@@ -1,11 +1,15 @@
 {% if DEFAULT_PAGINATION %}
 <p class="paginator">
     {% if articles_page.has_previous() %}
-        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="previous">&laquo;</a>
+        <span class="previous_navigator"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="previous">&laquo;Previous</a></span>
+    {% else %}
+        <span class="previous_navigator disabled"><span class="inactive">&laquo; Previous</span></span>
     {% endif %}
-    <span>{{ articles_page.number }} / {{ articles_paginator.num_pages }}</span>
+    <span>Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}</span>
     {% if articles_page.has_next() %}
-        <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="next">&raquo;</a>
+        <span class="next_navigator"><a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="next">Next &raquo;</a> </span> 
+    {% else %}
+        <span class="next_navigator disabled"><span class="inactive">Next &raquo;</span> </span>
     {% endif %}
 </p>
 {% endif %}
