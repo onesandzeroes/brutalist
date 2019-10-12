@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /************************
- * *
- * *Brutal Pelican Theme for mamcmanus.com
- * *© 2018 Matt McManus
- * *
- * ***********************
- * */
+ *
+ *Brutal Pelican Theme for mamcmanus.com
+ *© 2018 Matt McManus
+ *
+ ***********************
+ */
 /* MIXINS */
 .highlight {
   background: #f8f8f8;
@@ -285,6 +285,8 @@ body {
 @media (min-width: 55em) {
   .page {
     padding-left: 30%;
+    margin-top: 1em;
+    border-radius: 0.5em;
   }
 }
 @media (min-width: 65em) {
@@ -415,7 +417,8 @@ div#masthead a#menu-link {
 /* END NAVIGATION */
 /* FOOTER */
 footer {
-  margin: 2em auto;
+  margin: 1em auto;
+  padding-bottom: 0.5em;
 }
 footer p {
   color: #abb4b9;
@@ -441,7 +444,8 @@ footer a {
 @media (min-width: 55em) {
   .articles {
     padding: 2em;
-    padding-top: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 }
 .articles article {
@@ -499,8 +503,8 @@ footer a {
   /* results in ~60-70 characters per line */
   text-align: left;
   line-height: 1.75;
-  padding-top: 6em;
-  /* Article published date*/
+  padding-top: 2em;
+  /* Article published date */
   /*Article Header */
   /* Article content styles */
 }
@@ -516,7 +520,7 @@ footer a {
 }
 .article article header h2 {
   font-size: 2em;
-  /* 32/16 = 2*/
+  /* 32/16 = 2 */
   padding-bottom: 1em;
   font-weight: 900;
   text-align: center;
@@ -630,10 +634,10 @@ footer a {
 }
 
 .back-to-top {
-  padding-top: 2em;
   text-align: center;
-  margin-bottom: 6em;
+  margin-bottom: 2em;
   margin-top: 2em;
+  background: #E1ECF4;
 }
 .back-to-top a {
   font-size: 1.5em;
@@ -655,6 +659,7 @@ footer a {
   margin: 0 1em 1em 0;
   text-decoration: none;
   -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .tag:hover {
   background-color: crimson;
@@ -673,17 +678,27 @@ footer a {
 /* END TAGS */
 /* PAGINATION */
 .paginator {
-  font-size: 3em;
+  background: #E1ECF4;
+  border-radius: 0.5em;
+  font-size: 1em;
   text-align: center;
 }
-.paginator span {
-  font-size: 0.5em;
-}
-.paginator a.previous {
+.paginator .previous_navigator {
   float: left;
+  padding-left: 1em;
 }
-.paginator a.next {
+.paginator .next_navigator {
   float: right;
+  padding-right: 1em;
+}
+.paginator a {
+  color: #39739d;
+}
+.paginator .disabled {
+  color: #abb4b9;
+}
+.paginator .inactive {
+  text-decoration: underline;
 }
 
 /* END PAGINATION */
