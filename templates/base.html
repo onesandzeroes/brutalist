@@ -64,9 +64,7 @@
     {% block header %}
     <div role="banner" id="masthead">
         <header>
-            {% if GRAVATAR %}
-            <a href="/"><img src="{{ GRAVATAR }}" alt="{{ FIRST_NAME }} Avatar" class="gravatar"></a>
-            {% elif LOGO %}
+            {% if LOGO %}
             <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="{{ FIRST_NAME }} Logo"></a>
             {% endif %}
             <h1><a href="/">{{ FIRST_NAME }}'s Blog</a></h1>
