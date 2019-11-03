@@ -18,7 +18,7 @@
                         </a>
                     </header>
                     {% if article.cover_image %}
-                        <div class="cover"><img src="{{ article.cover_image }}" alt=""></img></div>
+                        <div class="cover"><img src="{{ SITEURL }}/{{ article.cover_image }}" alt=""></img></div>
                     {% endif %}
                     <div class="summary">{{ article.description }} </div>
                     <a href="{{ SITEURL }}/{{ article.url }}">
