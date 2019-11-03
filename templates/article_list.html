@@ -1,42 +1,42 @@
 <div class="articles">
-        <ol>
-            {% for article in articles_page.object_list %}
-            <li>
-                <article>
-                    <footer>
-                         <p>
-                            {% if article.category %}
-                                {% if article.category != "misc" %}
-                                    <a href="{{ SITEURL }}/{{ article.category.url }}"><span class="category-tag">{{ article.category }}</span></a>
-                                {% endif %}
+    <ol>
+        {% for article in articles_page.object_list %}
+        <li>
+            <article>
+                <footer>
+                        <p>
+                        {% if article.category %}
+                            {% if article.category != "misc" %}
+                                <a href="{{ SITEURL }}/{{ article.category.url }}"><span class="category-tag">{{ article.category }}</span></a>
                             {% endif %}
-                        </p>
-                    </footer>
-                    <header>
-                        <a href="{{ SITEURL }}/{{ article.url }}">
-                            <h2>{{ article.title }}</h2>
-                        </a>
-                    </header>
-                    {% if article.cover_image %}
-                        <div class="cover"><img src="{{ SITEURL }}/{{ article.cover_image }}" alt="{{ article.title }}" /></div>
-                    {% endif %}
-                    <div class="summary">{{ article.description }} </div>
+                        {% endif %}
+                    </p>
+                </footer>
+                <header>
                     <a href="{{ SITEURL }}/{{ article.url }}">
-                        <p class="readmore">Read more...</p>
+                        <h2>{{ article.title }}</h2>
                     </a>
-                    <div class="tags">
-                        <ul class="tags">
-                        {% for tag in article.tags %}
-                            <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </article>
-            </li>
-            {% endfor %}
-        </ol>
-        {% if articles_page.has_other_pages() %}
-            {% include 'pagination.html' %}
-        {% endif %}
-        
+                </header>
+                {% if article.cover_image %}
+                    <div class="cover"><img src="{{ SITEURL }}/{{ article.cover_image }}" alt="{{ article.title }}" /></div>
+                {% endif %}
+                <div class="summary">{{ article.description }} </div>
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    <p class="readmore">Read more...</p>
+                </a>
+                <div class="tags">
+                    <ul class="tags">
+                    {% for tag in article.tags %}
+                        <li><a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </article>
+        </li>
+        {% endfor %}
+    </ol>
+
+    {% if articles_page.has_other_pages() %}
+        {% include 'pagination.html' %}
+    {% endif %}
 </div>
