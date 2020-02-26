@@ -277,7 +277,7 @@ body {
 /* MAIN CONTENT CONTAINER */
 .page {
   background-color: #f0f1f2;
-  max-width: 42.5em;
+  max-width: 50em;
   margin: auto;
   text-align: center;
   line-height: 1.5;
@@ -535,6 +535,7 @@ footer a {
   /* code blocks */
 }
 .article article .content p {
+  max-width: 42.5em;
   padding-bottom: 1em;
 }
 .article article .content h2 {
